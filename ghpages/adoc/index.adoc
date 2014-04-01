@@ -1,0 +1,18 @@
+= Mastercoin on GitHub
+
+This page is the Mastercoin Organization Page on Github and is meant to be a starting point for developers who wish to do one or more of the following:
+
+. Learn about Mastercoin
+. Build Mastercoin
+. Install Mastercoin
+. Contribute to Mastercoin
+
+== About Mastercoin
+
+== Learning the Mastercoin protocol and implementation
+
+== Building and Installing Mastercoin
+
+== Contributinng to Mastercoin
+
+
