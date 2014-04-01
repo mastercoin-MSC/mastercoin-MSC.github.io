@@ -1,0 +1,21 @@
+buildscript {
+  repositories {
+      jcenter()
+  }
+
+  dependencies {
+    classpath 'org.ajoberstar:gradle-git:0.6.3'     
+  }
+}
+
+apply plugin: 'github-pages'                        
+
+githubPages {
+  repoUri = 'git@github.com:mastercoin-MSC/mastercoin-MSC.github.io.git'      
+  targetBranch = master  
+  pages {
+     from(file("$buildDir")) {
+     	into '.'                                    
+     }
+  }
+}
