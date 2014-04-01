@@ -1,0 +1,17 @@
+=  mastercoin-MSC.github.io - Mastercoin Github Organization Pages
+
+The generated website is http://mastercoin-MSC.github.io
+
+== To make a change
+
+. Checkout the +source+ branch with Git
+. Edit +adoc/index.adoc+
+. Review http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[AsciiDoc syntax]
+. Preview with the https://chrome.google.com/webstore/detail/asciidoctorjs-live-previe/iaalpfgpbocpdfblpnhhgllgbdbchmia[Chrome AsciiDoc plugin]
+. Commit your changes to the +source+ branch with Git
+
+== To publish
+
+. Run +./gradlew publish+
+
+
