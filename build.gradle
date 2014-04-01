@@ -27,3 +27,8 @@ asciidoctor {
         ]
     ]
 }
+
+task publish(type: GradleBuild) {
+    buildFile = 'publish.gradle'
+    tasks = ['publishGhPages']
+}
