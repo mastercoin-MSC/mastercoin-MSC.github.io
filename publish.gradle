@@ -12,7 +12,7 @@ apply plugin: 'github-pages'
 
 githubPages {
   repoUri = 'git@github.com:mastercoin-MSC/mastercoin-MSC.github.io.git'      
-  targetBranch = master  
+  targetBranch = 'master'
   pages {
      from(file("$buildDir")) {
      	into '.'                                    
