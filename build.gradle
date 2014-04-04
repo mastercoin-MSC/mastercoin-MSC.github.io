@@ -1,23 +1,25 @@
 buildscript {
     repositories {
-        mavenLocal()
-        mavenCentral()
         jcenter()
         maven { url 'http://dl.bintray.com/aalmiray/asciidoctor' }
     }
 
     dependencies {
-        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:0.8.0.SNAPSHOT'
+        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:0.7.0'
+        classpath 'org.ajoberstar:gradle-git:0.7.1'
     }
 }
 
 apply plugin: 'asciidoctor'
+apply plugin: 'github-pages'
+
+def siteDir = "$buildDir/site"
 
 asciidoctor {
-    backends = ['html5']   // html5 only for now
-//    backends = ['fopub','html5']
+    backend = 'html5'   // html5 only for now
+//    backends = ['fopub','html5']  // Requires 0.8.0 asciidoctor plugin
     sourceDir = file("adoc")
-    outputDir = file("$buildDir")
+    outputDir = file("$siteDir")
     options = [
         attributes: [
             icons: 'font',
@@ -28,7 +30,40 @@ asciidoctor {
     ]
 }
 
-task publish(type: GradleBuild) {
-    buildFile = 'publish.gradle'
-    tasks = ['publishGhPages']
+githubPages {
+//  repoUri = 'git@github.com:msgilligan/msgilligan.github.io.git'
+  repoUri = 'https://github.com/msgilligan/msgilligan.github.io.git'
+  targetBranch = 'master'
+
+  pages {
+     from(file("$siteDir")) {
+     	into '.'
+     }
+  }
+  credentials {
+    username = msgGithubAccessToken
+//    password = ''
+  }
 }
+
+
+task copyStatic(type: Copy,
+    group: 'render',
+    description: "Copies static files to buildDir") {
+    from "$rootDir"
+    into "$siteDir"
+    include "README.adoc"
+}
+
+task generate(dependsOn: [copyStatic, asciidoctor],
+    group: 'render',
+    description: "Generates static site in buildDir") {
+    doLast {
+        println "Static site generated in buildDir"
+    }
+}
+
+publishGhPages.dependsOn generate
+
+task publish(dependsOn: publishGhPages, group: 'render',
+            description: "Publishes buildDir to Github Pages on 'master' branch")
