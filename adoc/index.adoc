@@ -13,6 +13,6 @@ This page is the Mastercoin Organization Page on Github and is meant to be a sta
 
 == Building and Installing Mastercoin
 
-== Contributinng to Mastercoin
+== Contributing to Mastercoin
 
 
