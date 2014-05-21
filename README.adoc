@@ -1,6 +1,9 @@
 =  mastercoin-MSC.github.io - Mastercoin Github Organization Pages
 
-The generated website is http://mastercoin-MSC.github.io
+The generated and published website is http://mastercoin-MSC.github.io
+
+* Source (AsciiDoc) is in the +source+ branch
+* Generate static HTML is in the +master+ branch and automatically published by GitHub.
 
 == To make a change
 
@@ -13,8 +16,12 @@ The generated website is http://mastercoin-MSC.github.io
 .. Generate static site with +./gradlew generate+
 . Commit your changes to the +source+ branch with Git
 
+== To render (publish locally)
+
+. Run +./gradlew generate+
+. View the rendered site at +build/site/+
+
 == To publish
 
 . Run +./gradlew publish+
-
-
+. View the published site at http://mastercoin-MSC.github.io
