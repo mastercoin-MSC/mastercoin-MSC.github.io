@@ -1,0 +1,30 @@
+= Mastercoin Developer's Guide
+
+The Mastercoin Developer's Guide aims to be a comprehensive reference guide for developers covering the following:
+
+. Overview of Mastercoin
+.. Mission
+.. Features
+.. History
+.. Mastercoin Documentation & Resources
+. Implementations
+.. Mastercoin tools
+.. Mastercoind
+.. Other
+. Notable Wallet Applications
+.. Omniwallet
+.. Masterchest
+.. Other
+. Notable Master currencies
+.. Mastercoin
+.. Test Mastercoin
+.. MaidSafeCoin
+.. Other
+. Introduction to the Master Protocol
+.. Overview of key Mastercoin concepts and terminology
+.. Review of key Bitcoin features used by Mastercoin
+.. Introduction to the [Specification] and overview of it's contents
+. Building and running a full Mastercoin implementation
+.. Mastercoin-tools
+.. Mastercoind
+.. Omniwallet

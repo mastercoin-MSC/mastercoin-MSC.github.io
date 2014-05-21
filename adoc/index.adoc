@@ -11,6 +11,8 @@ This page is the Mastercoin Organization Page on Github and is meant to be a sta
 
 == Learning the Mastercoin protocol and implementation
 
+See the in-progress link:dev-guide[Mastercoin Developer's Guide]
+
 == Building and Installing Mastercoin
 
 == Contributing to Mastercoin
