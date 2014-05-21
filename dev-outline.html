@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="generator" content="Asciidoctor 0.1.4">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mastercoin on GitHub</title>
+<title>Mastercoin Developer&#8217;s Guide</title>
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
@@ -366,62 +366,300 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </head>
 <body class="article">
 <div id="header">
-<h1>Mastercoin on GitHub</h1>
+<h1>Mastercoin Developer&#8217;s Guide</h1>
 </div>
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This page is the Mastercoin Organization Page on Github and is meant to be a starting point for developers who wish to do one or more of the following:</p>
+<p>The Mastercoin Developer&#8217;s Guide aims to be a comprehensive reference guide for developers covering the following:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Learn about Mastercoin</p>
+<p>Overview of Mastercoin</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Mission</p>
 </li>
 <li>
-<p>Build Mastercoin</p>
+<p>Features</p>
 </li>
 <li>
-<p>Install Mastercoin</p>
+<p>History</p>
 </li>
 <li>
-<p>Contribute to Mastercoin</p>
+<p>Mastercoin Documentation &amp; Resources</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Implementations</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Mastercoin tools</p>
+</li>
+<li>
+<p>Mastercoind</p>
+</li>
+<li>
+<p>Other</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Notable Wallet Applications</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Omniwallet</p>
+</li>
+<li>
+<p>Masterchest</p>
+</li>
+<li>
+<p>Other</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Notable Master currencies</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Mastercoin</p>
+</li>
+<li>
+<p>Test Mastercoin</p>
+</li>
+<li>
+<p>MaidSafeCoin</p>
+</li>
+<li>
+<p>Other</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Introduction to the Master Protocol</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Overview of key Mastercoin concepts and terminology</p>
+</li>
+<li>
+<p>Review of key Bitcoin features used by Mastercoin</p>
+</li>
+<li>
+<p>Introduction to the [Specification] and overview of it&#8217;s contents</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Building and running a full Mastercoin implementation</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Mastercoin-tools</p>
+</li>
+<li>
+<p>Mastercoind</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Gitian building (modeled after Bitcoind)</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Omniwallet</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Introduction to Mastercoin API</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Mastercoin RPC API</p>
+</li>
+<li>
+<p>Other</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Building a Sample Application</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Leaderboard (pay for placement)</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Integrating an Exchange</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Sample exchange application?</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Mastercoin Tools Architecture Internals</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Diagram</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Mastercoind Architecture &amp; Internals</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Diagram</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Omniwallet Architectural Overview</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Diagram</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Testing: Unit, Integration, and Functional</p>
+</li>
+<li>
+<p>Contributing to Mastercoin</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Types of contributions</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Code</p>
+</li>
+<li>
+<p>Doc</p>
+</li>
+<li>
+<p>Art</p>
+</li>
+<li>
+<p>Bug reports</p>
+</li>
+<li>
+<p>Translation</p>
+</li>
+<li>
+<p>Education/Evengelization</p>
+</li>
+<li>
+<p>Other</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Community Guidelines</p>
+</li>
+<li>
+<p>Licensing Requirements/Guidelines</p>
+</li>
+<li>
+<p>Code Standards</p>
+</li>
+<li>
+<p>Development Process</p>
+</li>
+<li>
+<p>Community Venues (other than Github)</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>MastercoinTalk</p>
+</li>
+<li>
+<p>test.omniwallet.com</p>
+</li>
+<li>
+<p>Sococo</p>
+</li>
+<li>
+<p>Skype</p>
+</li>
+<li>
+<p>Other</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Github</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Resources</p>
+</li>
+<li>
+<p>Issues</p>
+<div class="olist upperalpha">
+<ol class="upperalpha" type="A">
+<li>
+<p>Creating</p>
+</li>
+<li>
+<p>Fixing</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Hackathons</p>
+</li>
+<li>
+<p>Bounties</p>
+</li>
+<li>
+<p>Becoming a RBB</p>
+</li>
+</ol>
+</div>
 </li>
 </ol>
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_about_mastercoin">About Mastercoin</h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
-<h2 id="_learning_the_mastercoin_protocol_and_implementation">Learning the Mastercoin protocol and implementation</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>See the in-progress <a href="dev-guide">Mastercoin Developer&#8217;s Guide</a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_building_and_installing_mastercoin">Building and Installing Mastercoin</h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
-<h2 id="_contributing_to_mastercoin">Contributing to Mastercoin</h2>
-<div class="sectionbody">
-
-</div>
-</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-05-21 10:47:31 PDT
+Last updated 2014-05-20 14:43:11 PDT
 </div>
 </div>
 </body>
