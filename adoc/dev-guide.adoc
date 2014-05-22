@@ -122,9 +122,10 @@ TBD
 
 === Mastercoin Documentation & Resources
 
-*
-*
-*
+* http://www.mastercoin.org[Mastercoin] 
+* [Mastercoin Foundation]
+* http://wiki.mastercoin.org/index.php/Main_Page[Mastercoin Dev Wiki]
+* http://masterprotocoleducation.org[Master Protocol Education]
 
 == Introduction to the Master Protocol
 
