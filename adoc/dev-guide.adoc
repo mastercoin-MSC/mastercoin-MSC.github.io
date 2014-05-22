@@ -1,30 +1,144 @@
 = Mastercoin Developer's Guide
+Sean Gilligan; Mastercoin Team
+v0.1, May 21, 2014: Early draft
+:numbered:
+:toc:
+:toclevels: 3
+:linkattrs:
 
-The Mastercoin Developer's Guide aims to be a comprehensive reference guide for developers covering the following:
+The Mastercoin Developer's Guide aims to be a comprehensive reference guide for Mastercoin developers. It provides a brief overview of Mastercoin, pointers to external Mastercoin documentation and resources, introductory information on the Mastercoin specification, and information on Mastercoin implementations and select applications.
 
-. Overview of Mastercoin
-.. Mission
-.. Features
-.. History
-.. Mastercoin Documentation & Resources
-. Implementations
-.. Mastercoin tools
-.. Mastercoind
-.. Other
-. Notable Wallet Applications
-.. Omniwallet
-.. Masterchest
-.. Other
-. Notable Master currencies
-.. Mastercoin
-.. Test Mastercoin
-.. MaidSafeCoin
-.. Other
-. Introduction to the Master Protocol
-.. Overview of key Mastercoin concepts and terminology
-.. Review of key Bitcoin features used by Mastercoin
-.. Introduction to the [Specification] and overview of it's contents
-. Building and running a full Mastercoin implementation
-.. Mastercoin-tools
-.. Mastercoind
-.. Omniwallet
+
+== Introduction to Mastercoin
+
+=== Mission
+
+The Master Protocol facilitates the creation and trading of smart properties and user currencies as well as other types of smart contracts. Mastercoins serve as the binding between bitcoins (BTC), smart properties and smart contracts created on top of the Mastercoin Protocol.
+
+Mastercoin enables Bitcoin ecosystem service providers to function in decentralized and p2p mode. Adoption of the Master Protocol will drive higher value economic transactions on the Bitcoin blockchain, which is good for Bitcoin miners and savers.
+
+For more information see the http://www.mastercoin.org[Mastercoin website]
+
+=== Features
+
+* Decentralized Exchange
++
+The capability to trade bitcoins for other digital currencies without having to use a third party. Master Protocol makes this possible by leveraging the Bitcoin blockchain as the "third party" and using Bitcoin's distributed timestamping service.
+
+* Smart Poperty
++
+Smart properties are digital property and contracts rights, which may be transferred. Smart tokens can represent services, products, titles, deeds, virtual currencies, and securities.
++
+Mastercoin Foundation plans and funds the development of the Master Protocol for the creation of smart tokens, and is involved in fostering adoption by services meeting the needs of people, governments and businesses.
+
+* User Currencies
++
+Master Protocol enabled applications will allow anyone to design and release their own smart tokens, with their own rules, without doing any software development. 
++
+Crowd Sale type virtual currencies and smart tokens will be available as of April 22, 2014.
+
+* Savings Wallets
++
+A savings wallet is a collection of saving addresses. The Saving Address feature is designed to increase hot wallet security while preserving ease of use.
++
+The transactions sent from those addresses are reversible for the specified time period.
+
+=== History
+
+January 6, 2012::
+http://www.mastercoinfoundation.org/#team[J. R. Willett] https://bitcointalk.org/index.php?topic=56901.0[publishes] Version 0.1 of https://sites.google.com/site/2ndbtcwpaper/2ndBitcoinWhitepaper.pdf[The Second Bitcoin Whitepaper].
+
+August 1, 2013::
+https://blockchain.info/address/1EXoDusjGwvnjZUyKkxZ4UHEf77z6A5S4P[Exodus Address] begins receiving Bitcoins.
+
+August 31, 2013::
+"Exodus Address" stops receiving Bitcoins. 63,162.4 MSC are generated and sent to those who sent Bitcoins to the Exodus address. 56,316.2 development MSC are also genereated for a total of 619,478.6 MSC created. Additional MSC will not be created.
+
+??::
+Major specification upgrade.
+
+??::
+Major software release.
+
+4/22/14::
+Maidsafe sale.
+
+NOTE::
+I want to have only 6-9 major milestones here to keep this short.
+
+For more information see:
+
+* http://wiki.mastercoin.org/index.php/Timeline
+* http://masterprotocoleducation.org/history-of-the-master-protocol/
+* http://blog.mastercoin.org/2013/11/29/a-brief-history-of-mastercoin/
+
+NOTE::
+Which of the above 3 links should we keep?
+
+== Overview of Ecosystem
+
+This section provides an overview of the Mastercoin ecosystem with links to the relevant resources.
+
+=== Implementations
+
+There are multiple implementations of the Mastercoin protocol available. <<imp-mastercon-tools>> is the current reference implementation (which is used by OmniWallet). We have begun work on a new reference implementation which we are colling mastercoind/mastercore, but it has not been released yet.
+
+[#imp-mastercon-tools]
+==== Mastercoin Tools
+
+https://github.com/grazcoin/mastercoin-tools[Mastercoin Tools] is a set of Python libraries and command-line tools that in turn depends upon the SX command from libbitcoin.
+
+For more information see the https://github.com/grazcoin/mastercoin-tools[README on Github].
+
+==== Mastercoind
+
+TBD
+
+==== Other
+
+TBD
+
+=== Notable Wallet Applications
+
+There are a handful of Mastercoin-enabled wallets for web and desktop platforms. We'll highlight a few of them here.
+
+==== Omniwallet
+
+Omniwallet is a major focus of development for the Mastercoin Foundation. You can find the https://github.com/zathras-crypto/masterchest-wallet[source code and a helpful README] file on Github.
+
+==== Masterchest
+
+The Masterchest wallet is a desktop wallet for the Windows platform. See the https://github.com/mastercoin-MSC/omniwallet[source and README] on Github,
+
+==== Other
+
+TBD
+
+=== Notable Master currencies
+==== Mastercoin
+==== Test Mastercoin
+==== MaidSafeCoin
+==== Other
+
+=== Mastercoin Documentation & Resources
+
+*
+*
+*
+
+== Introduction to the Master Protocol
+
+This section is TBD. For now your best starting point is the Specification itself.
+
+=== Overview of key Mastercoin concepts and terminology
+=== Review of key Bitcoin features used by Mastercoin
+=== Introduction to the Specification and overview of it's contents
+
+== Getting Started
+
+We'll be updating this section during the Hackathon. If you have any questions, please visit us on Sococo.
+
+=== Building and running a full Mastercoin implementation
+==== Mastercoin-tools
+==== Mastercoind
+==== Omniwallet
