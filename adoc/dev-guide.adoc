@@ -123,13 +123,13 @@ TBD
 === Mastercoin Documentation & Resources
 
 * http://www.mastercoin.org[Mastercoin] 
-* [Mastercoin Foundation]
+* http://www.mastercoinfoundation.org[Mastercoin Foundation]
 * http://wiki.mastercoin.org/index.php/Main_Page[Mastercoin Dev Wiki]
 * http://masterprotocoleducation.org[Master Protocol Education]
 
 == Introduction to the Master Protocol
 
-This section is TBD. For now your best starting point is the Specification itself.
+This section is TBD. For now your best starting point is the https://github.com/mastercoin-MSC/spec[Specification] itself.
 
 === Overview of key Mastercoin concepts and terminology
 === Review of key Bitcoin features used by Mastercoin
