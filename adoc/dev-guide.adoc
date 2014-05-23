@@ -143,3 +143,22 @@ We'll be updating this section during the Hackathon. If you have any questions, 
 ==== Mastercoin-tools
 ==== Mastercoind
 ==== Omniwallet
+
+== How to improve this document
+
+This document was created with http://asciidoctor.org[AsciiDoctor] a powerful markdown format especially suited for software project documentation. The markdown source is stored in the https://github.com/mastercoin-MSC/mastercoin-MSC.github.io/tree/source/[+source+ branch] of the [mastercoin-MSC.github.io] repository on Github in the file https://github.com/mastercoin-MSC/mastercoin-MSC.github.io/blob/source/adoc/dev-guide.adoc[dev-guide.adoc].
+
+The easiest way to make a change is to edit the file directly on Github. Github supports AsciiDoctor directly so just edit the file https://github.com/mastercoin-MSC/mastercoin-MSC.github.io/blob/source/adoc/dev-guide.adoc[dev-guide.adoc].
+
+If you want to check the file out with Git and work locally, there are browser plugins for Live Preview of Asciidoctor:
+
+* https://chrome.google.com/webstore/detail/asciidoctorjs-live-previe/iaalpfgpbocpdfblpnhhgllgbdbchmia[Asciidocgtor.js Live Preview] for Google Chrome
+* https://github.com/asciidoctor/asciidoctor-firefox-addon[Asciidoctor Firefox Addon] for Mozilla Firefox.
+
+NOTE::
+The Google Chrome plugin works well, I haven't tried the Firefox one yet.
+
+There are many other tools and toolchains that support Asciidoctor, but the above are the easiest to get started with.
+
+
+
