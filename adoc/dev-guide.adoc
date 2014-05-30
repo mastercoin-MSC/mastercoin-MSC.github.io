@@ -137,12 +137,23 @@ This section is TBD. For now your best starting point is the https://github.com/
 
 == Getting Started
 
-We'll be updating this section during the Hackathon. If you have any questions, please visit us on Sococo.
+The best way to get started is to build (install) and run one of our implementations.
 
 === Building and running a full Mastercoin implementation
+
+We have produced http://www.vagrantup.com[Vagrant] configurations for automatically creating https://www.virtualbox.org[VirtualBox] Virtual Machines running recent versions of Mastercoin components and stable versions of prerequisite components.
+
 ==== Mastercoin-tools
-==== Mastercoind
+
+Follow the instructions in https://github.com/mastercoin-MSC/install-msc/blob/vagrant/README-Vagrant.md#installing-mastercoin-tools[Installing Mastercoin Tools] on the +install-msc+ repo. (In the +vagrant+ branch for now.)
+ 
+==== Mastercore (aka mastercoind)
+
+Follow the instructions in https://github.com/mastercoin-MSC/install-msc/blob/vagrant/README-Vagrant.md#installing-mastercore[Installing Mastercore] on the +install-msc+ repo. (In the +vagrant+ branch for now.)
+
 ==== Omniwallet
+
+TBD.
 
 == How to improve this document
 
