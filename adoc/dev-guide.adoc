@@ -8,8 +8,6 @@ v0.1, May 21, 2014: Early draft
 
 The Mastercoin Developer's Guide aims to be a comprehensive reference guide for Mastercoin developers. It provides a brief overview of Mastercoin, pointers to external Mastercoin documentation and resources, introductory information on the Mastercoin specification, and information on Mastercoin implementations and select applications.
 
-toc::[]
-
 == Introduction to Mastercoin
 
 === Mission
