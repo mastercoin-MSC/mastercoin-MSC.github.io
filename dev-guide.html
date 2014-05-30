@@ -388,8 +388,8 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#_implementations">2.1. Implementations</a></li>
 <li>
 <ul class="sectlevel3">
-<li><a href="#imp-mastercon-tools">2.1.1. Mastercoin Tools</a></li>
-<li><a href="#_mastercoind">2.1.2. Mastercoind</a></li>
+<li><a href="#imp-mastercoin-tools">2.1.1. Mastercoin Tools</a></li>
+<li><a href="#imp-mastercore">2.1.2. Mastercore</a></li>
 <li><a href="#_other">2.1.3. Other</a></li>
 </ul>
 </li>
@@ -434,7 +434,8 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </li>
 </ul>
 </li>
-<li><a href="#_how_to_improve_this_document">5. How to improve this document</a></li>
+<li><a href="#_the_mastercoin_rpc_api">5. The Mastercoin RPC API</a></li>
+<li><a href="#_how_to_improve_this_document">6. How to improve this document</a></li>
 </ul>
 </div>
 </div>
@@ -452,7 +453,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <div class="sect2">
 <h3 id="_mission">1.1. Mission</h3>
 <div class="paragraph">
-<p>The Master Protocol facilitates the creation and trading of smart properties and user currencies as well as other types of smart contracts. Mastercoins serve as the binding between bitcoins (BTC), smart properties and smart contracts created on top of the Mastercoin Protocol.</p>
+<p>The Master Protocol facilitates the creation and trading of smart properties and user currencies as well as other types of smart contracts. Mastercoins serve as the binding between bitcoins (BTC), smart properties and smart contracts created on top of the Master Protocol.</p>
 </div>
 <div class="paragraph">
 <p>Mastercoin enables Bitcoin ecosystem service providers to function in decentralized and p2p mode. Adoption of the Master Protocol will drive higher value economic transactions on the Bitcoin blockchain, which is good for Bitcoin miners and savers.</p>
@@ -571,10 +572,10 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <div class="sect2">
 <h3 id="_implementations">2.1. Implementations</h3>
 <div class="paragraph">
-<p>There are multiple implementations of the Mastercoin protocol available. <a href="#imp-mastercon-tools">Mastercoin Tools</a> is the current reference implementation (which is used by OmniWallet). We have begun work on a new reference implementation which we are colling mastercoind/mastercore, but it has not been released yet.</p>
+<p>There are multiple implementations of the Master Protocol available. <a href="#imp-mastercoin-tools">Mastercoin Tools</a> is the current reference implementation (which is used by OmniWallet). We have begun work on a new reference implementation <a href="#imp-mastercore">Mastercore</a>, but it has not been released yet.</p>
 </div>
 <div class="sect3">
-<h4 id="imp-mastercon-tools">2.1.1. Mastercoin Tools</h4>
+<h4 id="imp-mastercoin-tools">2.1.1. Mastercoin Tools</h4>
 <div class="paragraph">
 <p><a href="https://github.com/grazcoin/mastercoin-tools">Mastercoin Tools</a> is a set of Python libraries and command-line tools that in turn depends upon the SX command from libbitcoin.</p>
 </div>
@@ -583,9 +584,12 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </div>
 </div>
 <div class="sect3">
-<h4 id="_mastercoind">2.1.2. Mastercoind</h4>
+<h4 id="imp-mastercore">2.1.2. Mastercore</h4>
 <div class="paragraph">
-<p>TBD</p>
+<p>Mastercore is in the early stages of development and is not ready for real-world use yet, but it is likely to become the new reference implementation for Mastercoin.</p>
+</div>
+<div class="paragraph">
+<p>Mastercore is based upon <a href="https://github.com/bitcoin/bitcoin">Bitcoin Core</a>&#8201;&#8212;&#8201;the reference implementation of Bitcoin. Mastercore adds support for the Master Protocol, while leaving the existing Bitcoin functionality unchanged.</p>
 </div>
 </div>
 <div class="sect3">
@@ -712,7 +716,67 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_to_improve_this_document">5. How to improve this document</h2>
+<h2 id="_the_mastercoin_rpc_api">5. The Mastercoin RPC API</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Mastercore implementation of Mastercoin will include a <a href="http://www.jsonrpc.org">JSON-RPC</a> API that allows access to key Mastercoin features over the HTTP(S) protocol. As Mastercore is based upon Bitcoin Core, the Mastercoin JSON-RPC API will be a superset of the API provided by Bitcoin.</p>
+</div>
+<div class="paragraph">
+<p>The Bitcoin RPC API is documented in the <a href="https://en.bitcoin.it/wiki/Original_Bitcoin_client/API_Calls_list">Bitcoin API Calls List</a>. This section documents the additional commands being added by Mastercoin.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width:100%; ">
+<colgroup>
+<col style="width:20%;">
+<col style="width:20%;">
+<col style="width:20%;">
+<col style="width:20%;">
+<col style="width:20%;"> 
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Parameters</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Requires Unlocked Wallet</th>
+<th class="tableblock halign-left valign-top">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">getMPbalance</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;address&gt; &lt;currencyID&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Retrieve balance of MP currency/property &amp; address pair</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Implemented</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">listMPtransactions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;address&gt; &lt;currencyID&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">list history of MP currency/property &amp; address pair</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To Do</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sendMPsimple</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;fromaddress&gt; &lt;toaddress&gt; &lt;currencyID&gt; &lt;amount&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">simple send (divisibility?)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To Do</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">getMPtransaction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;txid&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">return JSON array of a specific MP transaction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To Do</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_to_improve_this_document">6. How to improve this document</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This document was created with <a href="http://asciidoctor.org">AsciiDoctor</a> a powerful markdown format especially suited for software project documentation. The markdown source is stored in the <a href="https://github.com/mastercoin-MSC/mastercoin-MSC.github.io/tree/source/"><code>source</code> branch</a> of the [mastercoin-MSC.github.io] repository on Github in the file <a href="https://github.com/mastercoin-MSC/mastercoin-MSC.github.io/blob/source/adoc/dev-guide.adoc">dev-guide.adoc</a>.</p>
@@ -750,7 +814,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <div id="footer">
 <div id="footer-text">
 Version 0.1<br>
-Last updated 2014-05-29 23:40:18 PDT
+Last updated 2014-05-30 02:00:23 PDT
 </div>
 </div>
 </body>
