@@ -105,11 +105,11 @@ There are a handful of Mastercoin-enabled wallets for web and desktop platforms.
 
 ==== Omniwallet
 
-Omniwallet is a major focus of development for the Mastercoin Foundation. You can find the https://github.com/zathras-crypto/masterchest-wallet[source code and a helpful README] file on Github.
+Omniwallet is a major focus of development for the Mastercoin Foundation. You can find the https://github.com/mastercoin-MSC/omniwallet [source code and a helpful README] file on Github.
 
 ==== Masterchest
 
-The Masterchest wallet is a desktop wallet for the Windows platform. See the https://github.com/mastercoin-MSC/omniwallet[source and README] on Github,
+The Masterchest wallet is a desktop wallet for the Windows platform. See the https://github.com/zathras-crypto/masterchest-wallet[source and README] on Github,
 
 ==== Other
 
