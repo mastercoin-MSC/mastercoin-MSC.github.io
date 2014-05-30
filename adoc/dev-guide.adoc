@@ -12,7 +12,7 @@ The Mastercoin Developer's Guide aims to be a comprehensive reference guide for 
 
 === Mission
 
-The Master Protocol facilitates the creation and trading of smart properties and user currencies as well as other types of smart contracts. Mastercoins serve as the binding between bitcoins (BTC), smart properties and smart contracts created on top of the Mastercoin Protocol.
+The Master Protocol facilitates the creation and trading of smart properties and user currencies as well as other types of smart contracts. Mastercoins serve as the binding between bitcoins (BTC), smart properties and smart contracts created on top of the Master Protocol.
 
 Mastercoin enables Bitcoin ecosystem service providers to function in decentralized and p2p mode. Adoption of the Master Protocol will drive higher value economic transactions on the Bitcoin blockchain, which is good for Bitcoin miners and savers.
 
@@ -80,18 +80,21 @@ This section provides an overview of the Mastercoin ecosystem with links to the 
 
 === Implementations
 
-There are multiple implementations of the Mastercoin protocol available. <<imp-mastercon-tools>> is the current reference implementation (which is used by OmniWallet). We have begun work on a new reference implementation which we are colling mastercoind/mastercore, but it has not been released yet.
+There are multiple implementations of the Master Protocol available. <<imp-mastercoin-tools>> is the current reference implementation (which is used by OmniWallet). We have begun work on a new reference implementation <<imp-mastercore>>, but it has not been released yet.
 
-[#imp-mastercon-tools]
+[#imp-mastercoin-tools]
 ==== Mastercoin Tools
 
 https://github.com/grazcoin/mastercoin-tools[Mastercoin Tools] is a set of Python libraries and command-line tools that in turn depends upon the SX command from libbitcoin.
 
 For more information see the https://github.com/grazcoin/mastercoin-tools[README on Github].
 
-==== Mastercoind
+[#imp-mastercore]
+==== Mastercore
 
-TBD
+Mastercore is in the early stages of development and is not ready for real-world use yet, but it is likely to become the new reference implementation for Mastercoin.
+
+Mastercore is based upon https://github.com/bitcoin/bitcoin[Bitcoin Core] -- the reference implementation of Bitcoin. Mastercore adds support for the Master Protocol, while leaving the existing Bitcoin functionality unchanged.
 
 ==== Other
 
