@@ -157,6 +157,43 @@ Follow the instructions in https://github.com/mastercoin-MSC/install-msc/blob/va
 
 TBD.
 
+== The Mastercoin RPC API
+
+The Mastercore implementation of Mastercoin will include a http://www.jsonrpc.org[JSON-RPC] API that allows access to key Mastercoin features over the HTTP(S) protocol. As Mastercore is based upon Bitcoin Core, the Mastercoin JSON-RPC API will be a superset of the API provided by Bitcoin.
+
+The Bitcoin RPC API is documented in the https://en.bitcoin.it/wiki/Original_Bitcoin_client/API_Calls_list[Bitcoin API Calls List]. This section documents the additional commands being added by Mastercoin.
+
+[options="header",frame="all"]
+|===
+| Command | Parameters | Description | Requires Unlocked Wallet | Notes
+
+| getMPbalance
+| <address> <currencyID>
+| Retrieve balance of MP currency/property & address pair
+| N
+| Implemented
+
+| listMPtransactions
+| <address> <currencyID>
+| List history of MP currency/property & address pair
+| N
+| To Do
+
+| sendMPsimple
+| <fromaddress> <toaddress> <currencyID> <amount>
+| Simple send (divisibility?)
+| Y
+| To Do
+
+| getMPtransaction
+| <txid>
+| Return JSON array of a specific MP transaction
+| N
+| To Do
+
+|===
+
+
 == How to improve this document
 
 This document was created with http://asciidoctor.org[AsciiDoctor] a powerful markdown format especially suited for software project documentation. The markdown source is stored in the https://github.com/mastercoin-MSC/mastercoin-MSC.github.io/tree/source/[+source+ branch] of the [mastercoin-MSC.github.io] repository on Github in the file https://github.com/mastercoin-MSC/mastercoin-MSC.github.io/blob/source/adoc/dev-guide.adoc[dev-guide.adoc].
