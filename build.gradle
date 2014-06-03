@@ -20,6 +20,7 @@ asciidoctor {
 //    backends = ['fopub','html5']  // Requires 0.8.0 asciidoctor plugin
     sourceDir = file("adoc")
     outputDir = file("$siteDir")
+    baseDir = project.file('adoc')
     options = [
         attributes: [
             icons: 'font',
