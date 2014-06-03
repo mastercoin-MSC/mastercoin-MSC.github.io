@@ -450,7 +450,15 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </li>
 </ul>
 </li>
-<li><a href="#_how_to_improve_this_document">6. How to improve this document</a></li>
+<li><a href="#_adding_gpg_keys">6. Adding GPG keys</a></li>
+<li>
+<ul class="sectlevel2">
+<li><a href="#_linux">6.1. Linux</a></li>
+<li><a href="#_mac">6.2. Mac</a></li>
+<li><a href="#_windows">6.3. Windows</a></li>
+</ul>
+</li>
+<li><a href="#_how_to_improve_this_document">7. How to improve this document</a></li>
 </ul>
 </div>
 </div>
@@ -874,7 +882,56 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_to_improve_this_document">6. How to improve this document</h2>
+<h2 id="_adding_gpg_keys">6. Adding GPG keys</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>PGP is the de-facto method to ensuring your code is trusted when commiting upstream to the Mastercoin repository. To setup
+your key, you will need a copy of GPG for your OS: <a href="https://www.gnupg.org/">https://www.gnupg.org/</a></p>
+</div>
+<div class="sect2">
+<h3 id="_linux">6.1. Linux</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Installation</dt>
+<dd>
+<p>After downloading and installing, run: <code>gpg --gen-key</code> and follow the prompts to generate your key.</p>
+</dd>
+<dt class="hdlist1">Uploading your key to a keyserver</dt>
+<dd>
+<p><code>gpg --send-keys (key identifier)</code> note: the identifier is a 4-byte hex value ex. "0xDEADBEEF"</p>
+</dd>
+<dt class="hdlist1">Contact a developer</dt>
+<dd>
+<p>Contact another Mastercoin developer and have him or her verify the integrity of your key, so that he can include you
+in the Mastercoin web of trust.</p>
+</dd>
+<dt class="hdlist1">Committing code</dt>
+<dd>
+<p>Sign future commits with <code>git -S -m "(message)"</code></p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mac">6.2. Mac</h3>
+<div class="literalblock">
+<div class="content">
+<pre>#TODO</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_windows">6.3. Windows</h3>
+<div class="literalblock">
+<div class="content">
+<pre>#TODO</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_to_improve_this_document">7. How to improve this document</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This document was created with <a href="http://asciidoctor.org">AsciiDoctor</a> a powerful markdown format especially suited for software project documentation. The markdown source is stored in the <a href="https://github.com/mastercoin-MSC/mastercoin-MSC.github.io/tree/source/"><code>source</code> branch</a> of the [mastercoin-MSC.github.io] repository on Github in the file <a href="https://github.com/mastercoin-MSC/mastercoin-MSC.github.io/blob/source/adoc/dev-guide.adoc">dev-guide.adoc</a>.</p>
@@ -912,7 +969,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <div id="footer">
 <div id="footer-text">
 Version 0.1<br>
-Last updated 2014-06-02 21:34:06 PDT
+Last updated 2014-06-03 13:22:20 PDT
 </div>
 </div>
 </body>
