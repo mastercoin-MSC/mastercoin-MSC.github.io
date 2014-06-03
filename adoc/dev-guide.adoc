@@ -244,6 +244,28 @@ Return JSON array of an MP transaction specified by +txid+.
 
 Yes, we really expect Mastercore to become the reference implementation of Master Procool. :)
 
+== Adding GPG keys
+
+PGP is the de-facto method to ensuring your code is trusted when commiting upstream to the Mastercoin repository. To setup
+your key, you will need a copy of GPG for your OS: https://www.gnupg.org/
+
+=== Linux
+
+Installation::
+After downloading and installing, run: `gpg --gen-key` and follow the prompts to generate your key.
+Uploading your key to a keyserver::
+ `gpg --send-keys (key identifier)` note: the identifier is a 4-byte hex value ex. "0xDEADBEEF"
+Contact a developer:: 
+Contact another Mastercoin developer and have him or her verify the integrity of your key, so that he can include you 
+in the Mastercoin web of trust.
+Committing code::
+Sign future commits with `git -S -m "(message)"`
+
+=== Mac
+  #TODO
+
+=== Windows
+  #TODO
 
 == How to improve this document
 
