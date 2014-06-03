@@ -251,6 +251,8 @@ your key, you will need a copy of GPG for your OS: https://www.gnupg.org/
 
 === Linux
 
+Listing keys::
+`gpg -k` or `gpg --list-keys` will list all keys on your system.
 Installation::
 After downloading and installing, run: `gpg --gen-key` and follow the prompts to generate your key.
 Uploading your key to a keyserver::
@@ -259,6 +261,7 @@ Contact a developer::
 Contact another Mastercoin developer and have him or her verify the integrity of your key, so that he can include you 
 in the Mastercoin web of trust.
 Committing code::
+Add your key to your git config with `git config --global user.signingkey key_identifier` 
 Sign future commits with `git -S -m "(message)"`
 
 === Mac
