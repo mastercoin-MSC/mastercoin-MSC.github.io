@@ -203,7 +203,7 @@ This is preliminary information. The API is currently subject to change. We are 
 |===
 
 
-==== Types
+=== Types
 
 address::
 A https://en.bitcoin.it/wiki/Address[Bitcoin address].
@@ -214,19 +214,21 @@ A Master Protocol https://github.com/mastercoin-MSC/spec#field-currency-identifi
 amount::
 The number of coins or tokens in a Master Protocol transaction.  See https://github.com/mastercoin-MSC/spec#field-number-of-coins[Number of coins] in the spec.
 
-==== Methods
+=== Methods
 
-===== getMPbalance
+This section provides more detailed explanation of each RPC method. More details will be added over time.
+
+==== getMPbalance
 
 Returns the balance of +currencyID+ in +address+
 
-===== listMPtransactions
+==== listMPtransactions
 
 Returns a list of all Master Protocol transactions for a given +address+ and +currencyID+
 
 (Unspecified +currencyID+ gives all transactions for all currency IDs?)
 
-===== sendMPsimple
+==== sendMPsimple
 
 Send a Master Protocol currency from +fromaddress+ to +toaddress+.
 
@@ -234,7 +236,7 @@ Issues:
 
 * Divisibility?
 
-===== getMPtransaction
+==== getMPtransaction
 
 Return JSON array of an MP transaction specified by +txid+.
 
