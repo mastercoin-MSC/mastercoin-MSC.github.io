@@ -256,7 +256,7 @@ your key, you will need a copy of GPG for your OS: https://www.gnupg.org/
 Installation, key creation, and publishing::
 See the instructions for your Operating System below.
 
-=== Linux
+==== Linux
 To setup your key, you will need a copy of GPG for your OS: https://www.gnupg.org/ 
 
 Listing keys::
@@ -307,7 +307,7 @@ Signing keys::
 * Click *Generate Signature*
 * Choose the *Send public key to Keyserver"
 
-=== Windows
+==== Windows
 
 To setup your key, you will need a copy of GPG for your OS: https://www.gpg4win.org 
 
