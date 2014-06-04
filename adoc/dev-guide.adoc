@@ -246,23 +246,61 @@ Yes, we really expect Mastercore to become the reference implementation of Maste
 
 == Adding GPG keys
 
-PGP is the de-facto method to ensuring your code is trusted when commiting upstream to the Mastercoin repository. To setup
+Siging your commits with PGP/GPG is recommended to help ensure your code is trusted when commiting upstream to the Mastercoin repository. To setup
 your key, you will need a copy of GPG for your OS: https://www.gnupg.org/
 
-=== Linux
+Installation, key creation, and publishing::
+See the instructions for your Operating System below.
 
-Installation::
-After downloading and installing, run: `gpg --gen-key` and follow the prompts to generate your key.
-Uploading your key to a keyserver::
- `gpg --send-keys (key identifier)` note: the identifier is a 4-byte hex value ex. "0xDEADBEEF"
 Contact a developer:: 
-Contact another Mastercoin developer and have him or her verify the integrity of your key, so that he can include you 
-in the Mastercoin web of trust.
+Contact another Mastercoin developer and have him or her verify the integrity of your key, so that we can include you in the Mastercoin web of trust.
+
 Committing code::
 Sign future commits with `git -S -m "(message)"`
 
+If you're using a Git GUI, see the instructions for your particular software for GPG signing.
+
+=== Linux
+
+Installation and Setup::
+After downloading and installing, run: `gpg --gen-key` and follow the prompts to generate your key.
+Uploading your key to a keyserver::
+ `gpg --send-keys (key identifier)` note: the identifier is a 4-byte hex value ex. "0xDEADBEEF"
+
 === Mac
-  #TODO
+
+Recommeded Tools::
+
+* https://gpgtools.org[GPG Suite], which includes:
+** MacGPG (command line tools)
+** GPG Keychain
+** GPG Services
+** GPG for Mail (plugin for Apple Mail)
+* https://www.enigmail.net[Enigmail] (optional, if you're using Mozilla Thunderbird)
+
+Installation and Setup::
+
+* Download and run the GPG Suite Installer
+* Create a key pair and publish your public key
+** Open *GPG Keychain Access*
+** Click the *New* key icon to create a new key pair.
+** Enter your name and email address
+** Check *Upload public key after generation*
+
+Importing keys::
+
+* Get the new developer's Key ID via a trusted communications channel
+* Use the *Key* / *Retrieve from Keyserver…" menu in *GPG Keychain Access*
+* Enter the Key ID and click *Retrieve Key*
+
+Signing keys::
+
+* Select the key you want to sign in the *GPG Keychain Access* window
+* Choose the *Key* / *Sign…" menu
+* Indicate how carefully you have verified the key from the pop-up menu.
+* Click *Generate Signature*
+* Choose the *Send public key to Keyserver"
+
 
 === Windows
   #TODO
