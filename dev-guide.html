@@ -904,6 +904,18 @@ your key, you will need a copy of GPG for your OS: <a href="https://www.gnupg.or
 <dd>
 <p>See the instructions for your Operating System below.</p>
 </dd>
+<dt class="hdlist1">Contact a developer</dt>
+<dd>
+<p>Contact another Mastercoin developer and have him or her verify the integrity of your key, so that we can include you in the Mastercoin web of trust.</p>
+</dd>
+<dt class="hdlist1">Committing code</dt>
+<dd>
+<p>Add your key to your git config with <code>git config --global user.signingkey key_identifier</code>
+Sign future commits with <code>git -S -m "(message)"</code></p>
+<div class="paragraph">
+<p>If you&#8217;re using a Git GUI, see the instructions for your particular software for GPG signing.</p>
+</div>
+</dd>
 </dl>
 </div>
 <div class="sect3">
@@ -925,19 +937,7 @@ your key, you will need a copy of GPG for your OS: <a href="https://www.gnupg.or
 <dd>
 <p><code>gpg --send-keys (key identifier)</code> note: the identifier is a 4-byte hex value ex. "0xDEADBEEF"</p>
 </dd>
-<dt class="hdlist1">Contact a developer</dt>
-<dd>
-<p>Contact another Mastercoin developer and have him or her verify the integrity of your key, so that we can include you in the Mastercoin web of trust.</p>
-</dd>
-<dt class="hdlist1">Committing code</dt>
-<dd>
-<p>Add your key to your git config with <code>git config --global user.signingkey key_identifier</code>
-Sign future commits with <code>git -S -m "(message)"</code></p>
-</dd>
 </dl>
-</div>
-<div class="paragraph">
-<p>If you&#8217;re using a Git GUI, see the instructions for your particular software for GPG signing.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1313,7 +1313,7 @@ Sign future commits with <code>git -S -m "(message)"</code></p>
 <div id="footer">
 <div id="footer-text">
 Version 0.1<br>
-Last updated 2014-06-04 13:40:32 PDT
+Last updated 2014-06-04 13:49:06 PDT
 </div>
 </div>
 </body>
