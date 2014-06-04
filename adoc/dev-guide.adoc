@@ -1,5 +1,5 @@
 = Mastercoin Developer's Guide
-Sean Gilligan; Mastercoin Team
+Mastercoin Team
 v0.1, May 21, 2014: Early draft
 :numbered:
 :toc:
