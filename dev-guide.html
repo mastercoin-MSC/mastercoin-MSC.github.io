@@ -454,13 +454,13 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li>
 <ul class="sectlevel2">
 <li><a href="#_using_gpg_keys_for_git_commits">6.1. Using GPG keys for Git Commits</a></li>
+<li><a href="#_linux">6.2. Linux</a></li>
 <li>
 <ul class="sectlevel3">
-<li><a href="#_linux">6.1.1. Linux</a></li>
-<li><a href="#_mac">6.1.2. Mac</a></li>
-<li><a href="#_windows">6.1.3. Windows</a></li>
+<li><a href="#_mac">6.2.1. Mac</a></li>
 </ul>
 </li>
+<li><a href="#_windows">6.3. Windows</a></li>
 </ul>
 </li>
 <li><a href="#_how_to_improve_this_document">7. How to improve this document</a></li>
@@ -904,24 +904,21 @@ your key, you will need a copy of GPG for your OS: <a href="https://www.gnupg.or
 <dd>
 <p>See the instructions for your Operating System below.</p>
 </dd>
-<dt class="hdlist1">Contact a developer</dt>
-<dd>
-<p>Contact another Mastercoin developer and have him or her verify the integrity of your key, so that we can include you in the Mastercoin web of trust.</p>
-</dd>
-<dt class="hdlist1">Committing code</dt>
-<dd>
-<p>Sign future commits with <code>git -S -m "(message)"</code></p>
-</dd>
 </dl>
 </div>
-<div class="paragraph">
-<p>If you&#8217;re using a Git GUI, see the instructions for your particular software for GPG signing.</p>
 </div>
-<div class="sect3">
-<h4 id="_linux">6.1.1. Linux</h4>
+<div class="sect2">
+<h3 id="_linux">6.2. Linux</h3>
+<div class="paragraph">
+<p>To setup your key, you will need a copy of GPG for your OS: <a href="https://www.gnupg.org/">https://www.gnupg.org/</a></p>
+</div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">Installation and Setup</dt>
+<dt class="hdlist1">Listing keys</dt>
+<dd>
+<p><code>gpg -k</code> or <code>gpg --list-keys</code> will list all keys on your system.</p>
+</dd>
+<dt class="hdlist1">Installation</dt>
 <dd>
 <p>After downloading and installing, run: <code>gpg --gen-key</code> and follow the prompts to generate your key.</p>
 </dd>
@@ -929,11 +926,22 @@ your key, you will need a copy of GPG for your OS: <a href="https://www.gnupg.or
 <dd>
 <p><code>gpg --send-keys (key identifier)</code> note: the identifier is a 4-byte hex value ex. "0xDEADBEEF"</p>
 </dd>
+<dt class="hdlist1">Contact a developer</dt>
+<dd>
+<p>Contact another Mastercoin developer and have him or her verify the integrity of your key, so that we can include you in the Mastercoin web of trust.</p>
+</dd>
+<dt class="hdlist1">Committing code</dt>
+<dd>
+<p>Add your key to your git config with <code>git config --global user.signingkey key_identifier</code>
+Sign future commits with <code>git -S -m "(message)"</code></p>
+</dd>
 </dl>
 </div>
+<div class="paragraph">
+<p>If you&#8217;re using a Git GUI, see the instructions for your particular software for GPG signing.</p>
 </div>
 <div class="sect3">
-<h4 id="_mac">6.1.2. Mac</h4>
+<h4 id="_mac">6.2.1. Mac</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Recommeded Tools</dt>
@@ -1035,13 +1043,121 @@ your key, you will need a copy of GPG for your OS: <a href="https://www.gnupg.or
 </dl>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_windows">6.1.3. Windows</h4>
-<div class="literalblock">
-<div class="content">
-<pre>#TODO</pre>
 </div>
+<div class="sect2">
+<h3 id="_windows">6.3. Windows</h3>
+<div class="paragraph">
+<p>To setup your key, you will need a copy of GPG for your OS: <a href="https://www.gpg4win.org">https://www.gpg4win.org</a></p>
 </div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Downloading</dt>
+<dd>
+<p>Visit <a href="https://www.gpg4win.org/download.html">https://www.gpg4win.org/download.html</a> and grab a copy of GPG4Win (22meg).</p>
+</dd>
+<dt class="hdlist1">Installing</dt>
+<dd>
+<p>Make sure GPA is selected (Kleopatra not necessary) at a minimum, and proceed.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/Selection_142.png" alt="Selection_142"></span></p>
+</div>
+<div class="paragraph">
+<p>More installation default suggestions.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/Selection_143.png" alt="Selection_143"></span></p>
+</div>
+<div class="paragraph">
+<p>Hit finish to complete</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/Selection_144.png" alt="Selection_144"></span></p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Using GPA</dt>
+<dd>
+<p>This is the GPA icon
+<span class="image"><img src="images/Selection_145.png" alt="Selection_145"></span></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Hit generate key now
+<span class="image"><img src="images/Selection_146.png" alt="Selection_146"></span></p>
+</div>
+<div class="paragraph">
+<p>Insert your personal details
+<span class="image"><img src="images/Selection_147.png" alt="Selection_147"></span></p>
+</div>
+<div class="paragraph">
+<p>More details
+<span class="image"><img src="images/Selection_148.png" alt="Selection_148"></span></p>
+</div>
+<div class="paragraph">
+<p>Important: Enter a secure passphrase, this will be used to sign commits, messages and so on
+<span class="image"><img src="images/Selection_149.png" alt="Selection_149"></span></p>
+</div>
+<div class="paragraph">
+<p>You will see your newly generated key after following the prompts
+<span class="image"><img src="images/Selection_150.png" alt="Selection_150"></span></p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Uploading to keyserver</dt>
+<dd>
+<p>Right click your name
+<span class="image"><img src="images/Selection_151.png" alt="Selection_151"></span></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Click Send Keys
+<span class="image"><img src="images/Selection_152.png" alt="Selection_152"></span></p>
+</div>
+<div class="paragraph">
+<p>Hit OK to distribute your key</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Signing other keys</dt>
+<dd>
+<p>After verifying another person&#8217;s identity, add a key:</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/Selection_153.png" alt="Selection_153"></span></p>
+</div>
+<div class="paragraph">
+<p>Enter their KEY ID:
+<span class="image"><img src="images/Selection_154.png" alt="Selection_154"></span></p>
+</div>
+<div class="paragraph">
+<p>Right click and hover over Sign keys:
+<span class="image"><img src="images/Selection_155.png" alt="Selection_155"></span></p>
+</div>
+<div class="paragraph">
+<p>Agree to sign (if identity is verified)
+<span class="image"><img src="images/Selection_156.png" alt="Selection_156"></span></p>
+</div>
+<div class="paragraph">
+<p>Enter your passphrase
+<span class="image"><img src="images/Selection_157.png" alt="Selection_157"></span></p>
+</div>
+<div class="paragraph">
+<p>Right click the person&#8217;s key and hit send keys
+<span class="image"><img src="images/Selection_158.png" alt="Selection_158"></span></p>
+</div>
+<div class="paragraph">
+<p>Hit ok to distribute
+<span class="image"><img src="images/Selection_159.png" alt="Selection_159"></span></p>
+</div>
+<div class="paragraph">
+<p>All done!</p>
 </div>
 </div>
 </div>
@@ -1085,7 +1201,7 @@ your key, you will need a copy of GPG for your OS: <a href="https://www.gnupg.or
 <div id="footer">
 <div id="footer-text">
 Version 0.1<br>
-Last updated 2014-06-04 11:19:00 PDT
+Last updated 2014-06-04 13:05:48 PDT
 </div>
 </div>
 </body>
