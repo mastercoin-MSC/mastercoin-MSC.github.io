@@ -317,77 +317,72 @@ Visit https://www.gpg4win.org/download.html and grab a copy of GPG4Win (22meg).
 
 Installing::
 
+* Make sure GPA is selected (Kleopatra not necessary) at a minimum, and proceed. 
 
-Make sure GPA is selected (Kleopatra not necessary) at a minimum, and proceed. 
+*** image:images/Selection_142.png[]
 
-image:images/Selection_142.png[]
+* More installation default suggestions.
 
+*** image:images/Selection_143.png[]
 
-
-More installation default suggestions.
-
-image:images/Selection_143.png[]
-
-
-
-Hit finish to complete
-
-image:images/Selection_144.png[]
+* Hit finish to complete
+*** image:images/Selection_144.png[]
 
 Using GPA::
-This is the GPA icon
-image:images/Selection_145.png[]
 
-Hit generate key now
-image:images/Selection_146.png[]
+* This is the GPA icon
+*** image:images/Selection_145.png[]
 
-Insert your personal details
-image:images/Selection_147.png[]
+* Hit generate key now
+*** image:images/Selection_146.png[]
 
-More details
-image:images/Selection_148.png[]
+* Insert your personal details
+*** image:images/Selection_147.png[]
 
-Important: Enter a secure passphrase, this will be used to sign commits, messages and so on
-image:images/Selection_149.png[]
+* More details
+*** image:images/Selection_148.png[]
 
-You will see your newly generated key after following the prompts
-image:images/Selection_150.png[]
+* Important: Enter a secure passphrase, this will be used to sign commits, messages and so on
+*** image:images/Selection_149.png[]
+
+* You will see your newly generated key after following the prompts
+*** image:images/Selection_150.png[]
 
 Uploading to keyserver::
 
-Right click your name
-image:images/Selection_151.png[]
+* Right click your name
+*** image:images/Selection_151.png[]
 
-Click Send Keys
-image:images/Selection_152.png[]
+* Click Send Keys
+*** image:images/Selection_152.png[]
 
-Hit OK to distribute your key
-
+* Hit OK to distribute your key
 
 Signing other keys::
-After verifying another person's identity, add a key:
 
-image:images/Selection_153.png[]
+* After verifying another person's identity, add a key:
 
-Enter their KEY ID:
-image:images/Selection_154.png[]
+*** image:images/Selection_153.png[]
 
-Right click and hover over Sign keys:
-image:images/Selection_155.png[]
+* Enter their KEY ID:
+*** image:images/Selection_154.png[]
 
-Agree to sign (if identity is verified)
-image:images/Selection_156.png[]
+* Right click and hover over Sign keys:
+*** image:images/Selection_155.png[]
 
-Enter your passphrase
-image:images/Selection_157.png[]
+* Agree to sign (if identity is verified)
+*** image:images/Selection_156.png[]
 
-Right click the person's key and hit send keys
-image:images/Selection_158.png[]
+* Enter your passphrase
+*** image:images/Selection_157.png[]
 
-Hit ok to distribute
-image:images/Selection_159.png[]
+* Right click the person's key and hit send keys
+*** image:images/Selection_158.png[]
 
-All done!
+* Hit ok to distribute
+*** image:images/Selection_159.png[]
+
+*All done!*
 
 == How to improve this document
 
