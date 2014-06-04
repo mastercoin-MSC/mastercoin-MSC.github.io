@@ -450,12 +450,17 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </li>
 </ul>
 </li>
-<li><a href="#_adding_gpg_keys">6. Adding GPG keys</a></li>
+<li><a href="#_contributing_to_mastercoin">6. Contributing to Mastercoin</a></li>
 <li>
 <ul class="sectlevel2">
-<li><a href="#_linux">6.1. Linux</a></li>
-<li><a href="#_mac">6.2. Mac</a></li>
-<li><a href="#_windows">6.3. Windows</a></li>
+<li><a href="#_using_gpg_keys_for_git_commits">6.1. Using GPG keys for Git Commits</a></li>
+<li>
+<ul class="sectlevel3">
+<li><a href="#_linux">6.1.1. Linux</a></li>
+<li><a href="#_mac">6.1.2. Mac</a></li>
+<li><a href="#_windows">6.1.3. Windows</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#_how_to_improve_this_document">7. How to improve this document</a></li>
@@ -882,28 +887,26 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </div>
 </div>
 <div class="sect1">
-<h2 id="_adding_gpg_keys">6. Adding GPG keys</h2>
+<h2 id="_contributing_to_mastercoin">6. Contributing to Mastercoin</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>PGP is the de-facto method to ensuring your code is trusted when commiting upstream to the Mastercoin repository. To setup
-your key, you will need a copy of GPG for your OS: <a href="https://www.gnupg.org/">https://www.gnupg.org/</a></p>
+<p>This section contains procedures and guidelines for contributing to Mastercoin. More sections will be added as they are created.</p>
 </div>
 <div class="sect2">
-<h3 id="_linux">6.1. Linux</h3>
+<h3 id="_using_gpg_keys_for_git_commits">6.1. Using GPG keys for Git Commits</h3>
+<div class="paragraph">
+<p>Siging your commits with PGP/GPG is recommended to help ensure your code is trusted when commiting upstream to the Mastercoin repository. To setup
+your key, you will need a copy of GPG for your OS: <a href="https://www.gnupg.org/">https://www.gnupg.org/</a></p>
+</div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">Installation</dt>
+<dt class="hdlist1">Installation, key creation, and publishing</dt>
 <dd>
-<p>After downloading and installing, run: <code>gpg --gen-key</code> and follow the prompts to generate your key.</p>
-</dd>
-<dt class="hdlist1">Uploading your key to a keyserver</dt>
-<dd>
-<p><code>gpg --send-keys (key identifier)</code> note: the identifier is a 4-byte hex value ex. "0xDEADBEEF"</p>
+<p>See the instructions for your Operating System below.</p>
 </dd>
 <dt class="hdlist1">Contact a developer</dt>
 <dd>
-<p>Contact another Mastercoin developer and have him or her verify the integrity of your key, so that he can include you
-in the Mastercoin web of trust.</p>
+<p>Contact another Mastercoin developer and have him or her verify the integrity of your key, so that we can include you in the Mastercoin web of trust.</p>
 </dd>
 <dt class="hdlist1">Committing code</dt>
 <dd>
@@ -911,20 +914,133 @@ in the Mastercoin web of trust.</p>
 </dd>
 </dl>
 </div>
+<div class="paragraph">
+<p>If you&#8217;re using a Git GUI, see the instructions for your particular software for GPG signing.</p>
 </div>
-<div class="sect2">
-<h3 id="_mac">6.2. Mac</h3>
+<div class="sect3">
+<h4 id="_linux">6.1.1. Linux</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Installation and Setup</dt>
+<dd>
+<p>After downloading and installing, run: <code>gpg --gen-key</code> and follow the prompts to generate your key.</p>
+</dd>
+<dt class="hdlist1">Uploading your key to a keyserver</dt>
+<dd>
+<p><code>gpg --send-keys (key identifier)</code> note: the identifier is a 4-byte hex value ex. "0xDEADBEEF"</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mac">6.1.2. Mac</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Recommeded Tools</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://gpgtools.org">GPG Suite</a>, which includes:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>MacGPG (command line tools)</p>
+</li>
+<li>
+<p>GPG Keychain</p>
+</li>
+<li>
+<p>GPG Services</p>
+</li>
+<li>
+<p>GPG for Mail (plugin for Apple Mail)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://www.enigmail.net">Enigmail</a> (optional, if you&#8217;re using Mozilla Thunderbird)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Installation and Setup</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Download and run the GPG Suite Installer</p>
+</li>
+<li>
+<p>Create a key pair and publish your public key</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Open <strong>GPG Keychain Access</strong></p>
+</li>
+<li>
+<p>Click the <strong>New</strong> key icon to create a new key pair.</p>
+</li>
+<li>
+<p>Enter your name and email address</p>
+</li>
+<li>
+<p>Check <strong>Upload public key after generation</strong></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Importing keys</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Get the new developer&#8217;s Key ID via a trusted communications channel</p>
+</li>
+<li>
+<p>Use the <strong>Key</strong> / <strong>Retrieve from Keyserver…" menu in *GPG Keychain Access</strong></p>
+</li>
+<li>
+<p>Enter the Key ID and click <strong>Retrieve Key</strong></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Signing keys</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Select the key you want to sign in the <strong>GPG Keychain Access</strong> window</p>
+</li>
+<li>
+<p>Choose the <strong>Key</strong> / *Sign…" menu</p>
+</li>
+<li>
+<p>Indicate how carefully you have verified the key from the pop-up menu.</p>
+</li>
+<li>
+<p>Click <strong>Generate Signature</strong></p>
+</li>
+<li>
+<p>Choose the *Send public key to Keyserver"</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_windows">6.1.3. Windows</h4>
 <div class="literalblock">
 <div class="content">
 <pre>#TODO</pre>
 </div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_windows">6.3. Windows</h3>
-<div class="literalblock">
-<div class="content">
-<pre>#TODO</pre>
 </div>
 </div>
 </div>
@@ -969,7 +1085,7 @@ in the Mastercoin web of trust.</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.1<br>
-Last updated 2014-06-03 13:22:20 PDT
+Last updated 2014-06-04 10:56:39 PDT
 </div>
 </div>
 </body>
