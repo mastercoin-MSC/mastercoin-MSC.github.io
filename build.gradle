@@ -55,7 +55,16 @@ task copyStatic(type: Copy,
     include "README.adoc"
 }
 
-task generate(dependsOn: [copyStatic, asciidoctor],
+task copyImages(type: Copy,
+    group: 'render',
+    description: "Copies static files to buildDir") {
+    from "$rootDir/adoc/images"
+    into "$siteDir/images"
+//    include "README.adoc"
+}
+
+
+task generate(dependsOn: [copyStatic, copyImages, asciidoctor],
     group: 'render',
     description: "Generates static site in buildDir") {
     doLast {
