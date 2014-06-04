@@ -454,13 +454,13 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li>
 <ul class="sectlevel2">
 <li><a href="#_using_gpg_keys_for_git_commits">6.1. Using GPG keys for Git Commits</a></li>
-<li><a href="#_linux">6.2. Linux</a></li>
 <li>
 <ul class="sectlevel3">
-<li><a href="#_mac">6.2.1. Mac</a></li>
+<li><a href="#_linux">6.1.1. Linux</a></li>
+<li><a href="#_mac">6.1.2. Mac</a></li>
+<li><a href="#_windows">6.1.3. Windows</a></li>
 </ul>
 </li>
-<li><a href="#_windows">6.3. Windows</a></li>
 </ul>
 </li>
 <li><a href="#_how_to_improve_this_document">7. How to improve this document</a></li>
@@ -906,9 +906,8 @@ your key, you will need a copy of GPG for your OS: <a href="https://www.gnupg.or
 </dd>
 </dl>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_linux">6.2. Linux</h3>
+<div class="sect3">
+<h4 id="_linux">6.1.1. Linux</h4>
 <div class="paragraph">
 <p>To setup your key, you will need a copy of GPG for your OS: <a href="https://www.gnupg.org/">https://www.gnupg.org/</a></p>
 </div>
@@ -940,8 +939,9 @@ Sign future commits with <code>git -S -m "(message)"</code></p>
 <div class="paragraph">
 <p>If you&#8217;re using a Git GUI, see the instructions for your particular software for GPG signing.</p>
 </div>
+</div>
 <div class="sect3">
-<h4 id="_mac">6.2.1. Mac</h4>
+<h4 id="_mac">6.1.2. Mac</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Recommeded Tools</dt>
@@ -1043,9 +1043,8 @@ Sign future commits with <code>git -S -m "(message)"</code></p>
 </dl>
 </div>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_windows">6.3. Windows</h3>
+<div class="sect3">
+<h4 id="_windows">6.1.3. Windows</h4>
 <div class="paragraph">
 <p>To setup your key, you will need a copy of GPG for your OS: <a href="https://www.gpg4win.org">https://www.gpg4win.org</a></p>
 </div>
@@ -1057,107 +1056,220 @@ Sign future commits with <code>git -S -m "(message)"</code></p>
 </dd>
 <dt class="hdlist1">Installing</dt>
 <dd>
+<div class="ulist">
+<ul>
+<li>
 <p>Make sure GPA is selected (Kleopatra not necessary) at a minimum, and proceed.</p>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p><span class="image"><img src="images/Selection_142.png" alt="Selection_142"></span></p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
+</li>
+<li>
 <p>More installation default suggestions.</p>
-</div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p><span class="image"><img src="images/Selection_143.png" alt="Selection_143"></span></p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
+</li>
+<li>
 <p>Hit finish to complete</p>
-</div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p><span class="image"><img src="images/Selection_144.png" alt="Selection_144"></span></p>
+</li>
+</ul>
 </div>
-<div class="dlist">
-<dl>
+</li>
+</ul>
+</div>
+</dd>
 <dt class="hdlist1">Using GPA</dt>
 <dd>
-<p>This is the GPA icon
-<span class="image"><img src="images/Selection_145.png" alt="Selection_145"></span></p>
+<div class="ulist">
+<ul>
+<li>
+<p>This is the GPA icon</p>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="images/Selection_145.png" alt="Selection_145"></span></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Hit generate key now</p>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="images/Selection_146.png" alt="Selection_146"></span></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Insert your personal details</p>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="images/Selection_147.png" alt="Selection_147"></span></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>More details</p>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="images/Selection_148.png" alt="Selection_148"></span></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Important: Enter a secure passphrase, this will be used to sign commits, messages and so on</p>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="images/Selection_149.png" alt="Selection_149"></span></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>You will see your newly generated key after following the prompts</p>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="images/Selection_150.png" alt="Selection_150"></span></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 </dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>Hit generate key now
-<span class="image"><img src="images/Selection_146.png" alt="Selection_146"></span></p>
-</div>
-<div class="paragraph">
-<p>Insert your personal details
-<span class="image"><img src="images/Selection_147.png" alt="Selection_147"></span></p>
-</div>
-<div class="paragraph">
-<p>More details
-<span class="image"><img src="images/Selection_148.png" alt="Selection_148"></span></p>
-</div>
-<div class="paragraph">
-<p>Important: Enter a secure passphrase, this will be used to sign commits, messages and so on
-<span class="image"><img src="images/Selection_149.png" alt="Selection_149"></span></p>
-</div>
-<div class="paragraph">
-<p>You will see your newly generated key after following the prompts
-<span class="image"><img src="images/Selection_150.png" alt="Selection_150"></span></p>
-</div>
-<div class="dlist">
-<dl>
 <dt class="hdlist1">Uploading to keyserver</dt>
 <dd>
-<p>Right click your name
-<span class="image"><img src="images/Selection_151.png" alt="Selection_151"></span></p>
-</dd>
-</dl>
+<div class="ulist">
+<ul>
+<li>
+<p>Right click your name</p>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="images/Selection_151.png" alt="Selection_151"></span></p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
-<p>Click Send Keys
-<span class="image"><img src="images/Selection_152.png" alt="Selection_152"></span></p>
+</li>
+<li>
+<p>Click Send Keys</p>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="images/Selection_152.png" alt="Selection_152"></span></p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
+</li>
+<li>
 <p>Hit OK to distribute your key</p>
+</li>
+</ul>
 </div>
-<div class="dlist">
-<dl>
+</dd>
 <dt class="hdlist1">Signing other keys</dt>
 <dd>
+<div class="ulist">
+<ul>
+<li>
 <p>After verifying another person&#8217;s identity, add a key:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="images/Selection_153.png" alt="Selection_153"></span></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Enter their KEY ID:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="images/Selection_154.png" alt="Selection_154"></span></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Right click and hover over Sign keys:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="images/Selection_155.png" alt="Selection_155"></span></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Agree to sign (if identity is verified)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="images/Selection_156.png" alt="Selection_156"></span></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Enter your passphrase</p>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="images/Selection_157.png" alt="Selection_157"></span></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Right click the person&#8217;s key and hit send keys</p>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="images/Selection_158.png" alt="Selection_158"></span></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Hit ok to distribute</p>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="images/Selection_159.png" alt="Selection_159"></span></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 </dd>
 </dl>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="images/Selection_153.png" alt="Selection_153"></span></p>
+<p><strong>All done!</strong></p>
 </div>
-<div class="paragraph">
-<p>Enter their KEY ID:
-<span class="image"><img src="images/Selection_154.png" alt="Selection_154"></span></p>
-</div>
-<div class="paragraph">
-<p>Right click and hover over Sign keys:
-<span class="image"><img src="images/Selection_155.png" alt="Selection_155"></span></p>
-</div>
-<div class="paragraph">
-<p>Agree to sign (if identity is verified)
-<span class="image"><img src="images/Selection_156.png" alt="Selection_156"></span></p>
-</div>
-<div class="paragraph">
-<p>Enter your passphrase
-<span class="image"><img src="images/Selection_157.png" alt="Selection_157"></span></p>
-</div>
-<div class="paragraph">
-<p>Right click the person&#8217;s key and hit send keys
-<span class="image"><img src="images/Selection_158.png" alt="Selection_158"></span></p>
-</div>
-<div class="paragraph">
-<p>Hit ok to distribute
-<span class="image"><img src="images/Selection_159.png" alt="Selection_159"></span></p>
-</div>
-<div class="paragraph">
-<p>All done!</p>
 </div>
 </div>
 </div>
@@ -1201,7 +1313,7 @@ Sign future commits with <code>git -S -m "(message)"</code></p>
 <div id="footer">
 <div id="footer-text">
 Version 0.1<br>
-Last updated 2014-06-04 13:05:48 PDT
+Last updated 2014-06-04 13:40:32 PDT
 </div>
 </div>
 </body>
