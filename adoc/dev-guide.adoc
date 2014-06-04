@@ -244,7 +244,11 @@ Return JSON array of an MP transaction specified by +txid+.
 
 Yes, we really expect Mastercore to become the reference implementation of Master Procool. :)
 
-== Adding GPG keys
+== Contributing to Mastercoin
+
+This section contains procedures and guidelines for contributing to Mastercoin. More sections will be added as they are created.
+
+=== Using GPG keys for Git Commits
 
 Siging your commits with PGP/GPG is recommended to help ensure your code is trusted when commiting upstream to the Mastercoin repository. To setup
 your key, you will need a copy of GPG for your OS: https://www.gnupg.org/
@@ -260,14 +264,14 @@ Sign future commits with `git -S -m "(message)"`
 
 If you're using a Git GUI, see the instructions for your particular software for GPG signing.
 
-=== Linux
+==== Linux
 
 Installation and Setup::
 After downloading and installing, run: `gpg --gen-key` and follow the prompts to generate your key.
 Uploading your key to a keyserver::
  `gpg --send-keys (key identifier)` note: the identifier is a 4-byte hex value ex. "0xDEADBEEF"
 
-=== Mac
+==== Mac
 
 Recommeded Tools::
 
@@ -302,7 +306,7 @@ Signing keys::
 * Choose the *Send public key to Keyserver"
 
 
-=== Windows
+==== Windows
   #TODO
 
 == How to improve this document
