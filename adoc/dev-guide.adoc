@@ -256,6 +256,14 @@ your key, you will need a copy of GPG for your OS: https://www.gnupg.org/
 Installation, key creation, and publishing::
 See the instructions for your Operating System below.
 
+Contact a developer:: 
+Contact another Mastercoin developer and have him or her verify the integrity of your key, so that we can include you in the Mastercoin web of trust.
+Committing code::
+Add your key to your git config with `git config --global user.signingkey key_identifier` 
+Sign future commits with `git -S -m "(message)"`
++
+If you're using a Git GUI, see the instructions for your particular software for GPG signing.
+
 ==== Linux
 To setup your key, you will need a copy of GPG for your OS: https://www.gnupg.org/ 
 
@@ -265,13 +273,6 @@ Installation::
 After downloading and installing, run: `gpg --gen-key` and follow the prompts to generate your key.
 Uploading your key to a keyserver::
  `gpg --send-keys (key identifier)` note: the identifier is a 4-byte hex value ex. "0xDEADBEEF"
-Contact a developer:: 
-Contact another Mastercoin developer and have him or her verify the integrity of your key, so that we can include you in the Mastercoin web of trust.
-Committing code::
-Add your key to your git config with `git config --global user.signingkey key_identifier` 
-Sign future commits with `git -S -m "(message)"`
-
-If you're using a Git GUI, see the instructions for your particular software for GPG signing.
 
 ==== Mac
 
