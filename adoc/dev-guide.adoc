@@ -316,6 +316,8 @@ Downloading::
 
 Visit https://www.gpg4win.org/download.html and grab a copy of GPG4Win (22meg).
 
+(Note - you may see an [SSL certificate problem](https://imgur.com/exdQ6nP) when downloading gpg4win ... I'm not sure how to fix that or grab a secure copy)
+
 Installing::
 
 * Make sure GPA is selected (Kleopatra not necessary) at a minimum, and proceed. 
