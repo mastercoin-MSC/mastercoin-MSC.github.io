@@ -41,7 +41,7 @@ githubPages {
      }
   }
   credentials {
-    username = msgGithubAccessToken
+    username = 'msgilligan'
 //    password = ''
   }
 }
