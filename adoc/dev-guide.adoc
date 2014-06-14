@@ -1,6 +1,6 @@
 = Mastercoin Developer's Guide
 Mastercoin Team
-v0.1.1, June 13, 2014: Early draft
+v0.1.2, June 13, 2014: Early draft
 :numbered:
 :toc:
 :toclevels: 3
