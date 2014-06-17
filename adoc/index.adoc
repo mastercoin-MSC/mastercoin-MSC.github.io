@@ -13,6 +13,10 @@ This page is the Mastercoin Organization Page on Github and is meant to be a sta
 
 See the in-progress link:dev-guide.html[Mastercoin Developer's Guide]
 
+== Project Documents
+
+* link:mastercore-testplan.html[Mastercore Test Plan] (draft)
+
 == About this site
 
 See the https://github.com/mastercoin-MSC/mastercoin-MSC.github.io[Github repo README].

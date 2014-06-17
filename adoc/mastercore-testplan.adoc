@@ -1,0 +1,160 @@
+= Mastercore Test Plan
+Mastercoin Team
+v0.1, June 18, 2014: 1st draft
+:numbered:
+:toc:
+:toclevels: 3
+:linkattrs:
+
+The Mastercore Test Plan describes the methodology, tools, and priorities for Mastercore testing. This is a preliminary draft.
+
+== Goals
+
+A key piece of cryptocurrency infrastructure like Mastercore should have every function thoroughly tested with all valid and invalid inputs. Further, all build processes should be reproducible, deterministic, and security audited. Mastercore has a very aggressive schedule so that Mastercore may replace existing Master Protocol implementations are soon as possible. For this reason we are planning a phased-implementation of testing -- we will add more testing tools and procedures to each milesone release.
+
+Our overall strategy includes:
+
+* Create automated tests for key API/programmatic features of each milestone release.
+* Create test suites that support addition of new tests as issues are discovered by developers or reproted by beta testers.
+* Create feature test plans for manual, end-user testing and recruit volunteers (or offer bounties) to get the feature test plans executed.
+* Security testing (TBD)
+
+
+== Milestones
+
+=== G'kar (20 June)
+
+* C++ Unit Test run as part of every build (+ Jenkins?)
+* Consensus check current main net (+ Jenkins?)
+* Consensus check current test net? (+ Jenkins?)
+* Spock integration tests of all new RPCs (+ Jenkins?)
+* Application testing (after release)
+** Exchange beta tester?
+** Omniwallet?
+
+
+=== Garibaldi (4 July)
+
+* All tests from G'kar
+* All tests marked "Jenkins?" tests running in Jenkins
+* Add Spock integration tests for all additional RPCs
+* Other?
+
+=== Mollari (11 July)
+
+* TBD
+
+=== Valen (1 Aug)
+
+* TBD
+
+== Test Types
+
+===  Bitcoin Core Tests
+
+Since Mastercore is an enhanced 'fork' of Bitcoin Core and provides a superset of Bitcoin Core's functionality, we will run all tests provided by the Bitcoin Core project against Mastercore to make sure there have been no regressions introduced.
+
+==== C++ Unit Tests
+
+The C++ Unit Tests should be automatically run with every official build and should eventually run as part of the main Jenkins build, when Jenkins is set up.
+
+==== RPC Tests
+
+There is a collection of Python and Shell scripts in the +qa/rpc-tests+ directory of the +bitcoin+ repository. They seem to mostly use +regtest+ mode and are not (currently) configured to run automatically as part of a build or any othe rway.
+
+==== Pull Tests
+
+The https://github.com/TheBlueMatt/test-scripts[Bitcoin pull tester] is used to automatically validate pull requests on Github. It does not seem to be working lately. Needs further investigation.
+
+=== Mastercoin consensus checking
+
+Run mastercore on the main net and then compare consensus with Mastercoin Tools and Masterchest, etc.
+
+=== Mastercoin integration testing (Spock)
+
+Run Spock Functional tests against RPC on either Main Net, Test Net, or Reg Test mode.
+
+Here's a simple Spock test that uses RegTest mode to write a block:
+
+[source, groovy]
+.Sample Spock Test
+----
+def "can write a block"() {
+
+    when: "we generate 1 new block"
+        def startCount = client.getBlockCount()                 // Get starting block count
+        client.setGenerate(true, 1)                             // Generate 1 block
+
+    then: "the block count is 1 higher"
+        client.getBlockCount() == startCount + 1                // Verify block count
+
+}
+---- 
+
+Using RegTest mode to "speed up time" and generate blocks on demand will be even more important when we write integration tests for DEx transactions, Smart Property issueance, etc.  For example:
+
+[source, groovy]
+.Sample Spock Test SP (pseudocode)
+----
+def "smart property issuance"() {
+
+    when: "we start a crowdsale"
+        client.issueSP(args)                 // Start the sale
+        client.setGenerate(true, 1)          // Generate 1 block
+
+    and: "someone buys with early bird discount"
+        client.buySP(args)
+        client.setGenerate(true, 5)          // Generate 5 blocks
+
+    and: "same person buys later in the crowdsale"
+        client.buySP(args)
+        client.setGenerate(true, 3)          // Generate 3 blocks
+
+    and: "the crowdsale is closed"
+        client.closeIssuance(args)
+        client.closeIssuance(true, 1)        // Generate 1 block
+
+    then: "the block count is 1 higher"
+        client.getBalance() == earlyTokens + lateTokens    // Verify balance
+
+}
+---- 
+
+Admittedly these tests could be run against Main Net or Test Net, but will need to wait a long time in order to test the final results of the crowdsale.
+
+=== Application Integration testing
+
+Applications::
+
+* Omniwallet
+* Masterchest
+* Exchange beta
+
+Environments::
+
+* Main network
+* Test netwok
+* RegTest ?
+
+=== Manual QA Testing
+
+Specific features of each milestone may require manual testing. Where extensive manual testing is required, a test plan for that specific feature or change should be written and 
+
+== How to improve this document
+
+This document was created with http://asciidoctor.org[AsciiDoctor] a powerful markdown format especially suited for software project documentation. The markdown source is stored in the https://github.com/mastercoin-MSC/mastercoin-MSC.github.io/tree/source/[+source+ branch] of the [mastercoin-MSC.github.io] repository on Github in the file https://github.com/mastercoin-MSC/mastercoin-MSC.github.io/blob/source/adoc/mastercore-testplan.adoc[mastercore-testplan.adoc].
+
+The easiest way to make a change is to edit the file directly on Github. Github supports AsciiDoctor directly so just edit the file https://github.com/mastercoin-MSC/mastercoin-MSC.github.io/blob/source/adoc/mastercore-testplan.adoc[mastercore-testplan.adoc].
+
+If you want to check the file out with Git and work locally, there are browser plugins for Live Preview of Asciidoctor:
+
+* https://chrome.google.com/webstore/detail/asciidoctorjs-live-previe/iaalpfgpbocpdfblpnhhgllgbdbchmia[Asciidocgtor.js Live Preview] for Google Chrome
+* https://github.com/asciidoctor/asciidoctor-firefox-addon[Asciidoctor Firefox Addon] for Mozilla Firefox.
+
+NOTE::
+The Google Chrome plugin works well, I haven't tried the Firefox one yet.
+
+There are many other tools and toolchains that support Asciidoctor, but the above are the easiest to get started with.
+
+
+
