@@ -99,24 +99,23 @@ Using RegTest mode to "speed up time" and generate blocks on demand will be even
 def "smart property issuance"() {
 
     when: "we start a crowdsale"
-        client.issueSP(args)                 // Start the sale
+        client.issueSP(MYTOKEN, otherargs)   // Start the sale
         client.setGenerate(true, 1)          // Generate 1 block
 
-    and: "someone buys with early bird discount"
-        client.buySP(args)
+    and: "someone (myAddress) buys with early bird discount"
+        client.buySP(myAddress, args)
         client.setGenerate(true, 5)          // Generate 5 blocks
 
-    and: "same person buys later in the crowdsale"
-        client.buySP(args)
+    and: "same address buys later in the crowdsale"
+        client.buySP(myAddress, args)
         client.setGenerate(true, 3)          // Generate 3 blocks
 
     and: "the crowdsale is closed"
         client.closeIssuance(args)
-        client.closeIssuance(true, 1)        // Generate 1 block
+        client.setGenerate(true, 1)        // Generate 1 block
 
-    then: "the block count is 1 higher"
-        client.getBalance() == earlyTokens + lateTokens    // Verify balance
-
+    then: "The address has the right balance of the SP token"
+        client.getBalance(myAddress, MYTOKEN) == earlyTokens + lateTokens
 }
 ---- 
 
