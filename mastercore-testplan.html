@@ -581,24 +581,23 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <pre class="prettyprint groovy language-groovy"><code>def "smart property issuance"() {
 
     when: "we start a crowdsale"
-        client.issueSP(args)                 // Start the sale
+        client.issueSP(MYTOKEN, otherargs)   // Start the sale
         client.setGenerate(true, 1)          // Generate 1 block
 
-    and: "someone buys with early bird discount"
-        client.buySP(args)
+    and: "someone (myAddress) buys with early bird discount"
+        client.buySP(myAddress, args)
         client.setGenerate(true, 5)          // Generate 5 blocks
 
-    and: "same person buys later in the crowdsale"
-        client.buySP(args)
+    and: "same address buys later in the crowdsale"
+        client.buySP(myAddress, args)
         client.setGenerate(true, 3)          // Generate 3 blocks
 
     and: "the crowdsale is closed"
         client.closeIssuance(args)
-        client.closeIssuance(true, 1)        // Generate 1 block
+        client.setGenerate(true, 1)        // Generate 1 block
 
-    then: "the block count is 1 higher"
-        client.getBalance() == earlyTokens + lateTokens    // Verify balance
-
+    then: "The address has the right balance of the SP token"
+        client.getBalance(myAddress, MYTOKEN) == earlyTokens + lateTokens
 }</code></pre>
 </div>
 </div>
@@ -692,7 +691,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <div id="footer">
 <div id="footer-text">
 Version 0.1<br>
-Last updated 2014-06-17 03:51:32 PDT
+Last updated 2014-06-17 14:59:30 PDT
 </div>
 </div>
 </body>
