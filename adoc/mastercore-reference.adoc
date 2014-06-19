@@ -1,4 +1,4 @@
-= Mastercore Specification
+= Mastercore Reference
 Mastercoin Team
 v0.1, June 18, 2014: Early draft
 :numbered:
