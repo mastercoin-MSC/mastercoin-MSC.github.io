@@ -22,6 +22,10 @@ Our overall strategy includes:
 
 == Milestones
 
+The milestones in this document correspond to the milestones in 
+https://docs.google.com/a/mastercoin.org/document/d/1F1_ApeDA0bF3P34kaExhEQ5Ma4krSNmX3zwrRDDKU5E/
+
+
 === G'kar (20 June)
 
 * C++ Unit Test run as part of every build (+ Jenkins?)
