@@ -5,12 +5,12 @@ buildscript {
     }
 
     dependencies {
-        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:0.7.0'
+        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:0.7.3'
         classpath 'org.ajoberstar:gradle-git:0.9.0'
     }
 }
 
-apply plugin: 'asciidoctor'
+apply plugin: 'org.asciidoctor.gradle.asciidoctor'
 apply plugin: 'github-pages'
 
 def siteDir = "$buildDir/site"
