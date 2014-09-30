@@ -1,6 +1,6 @@
 = Mastercoin Developer's Guide
 Mastercoin Team
-v0.1.2, June 13, 2014: Early draft
+v0.1.3, September 29, 2014: Early draft
 :numbered:
 :toc:
 :toclevels: 3
@@ -90,11 +90,11 @@ https://github.com/grazcoin/mastercoin-tools[Mastercoin Tools] is a set of Pytho
 For more information see the https://github.com/grazcoin/mastercoin-tools[README on Github].
 
 [#imp-mastercore]
-==== Mastercore
+==== Master Core
 
-Mastercore is in the early stages of development and is not ready for real-world use yet, but it is likely to become the new reference implementation for Mastercoin.
+http://github.com/mastercoin-MSC/mastercore[Master Core] is the new reference implementation for Mastercoin and is available in experimental form.
 
-Mastercore is based upon https://github.com/bitcoin/bitcoin[Bitcoin Core] -- the reference implementation of Bitcoin. Mastercore adds support for the Master Protocol, while leaving the existing Bitcoin functionality unchanged.
+Maste Core is based upon https://github.com/bitcoin/bitcoin[Bitcoin Core] -- the reference implementation of Bitcoin. Mastercore adds support for the Master Protocol, while leaving the existing Bitcoin functionality unchanged.
 
 ==== Other
 
@@ -157,92 +157,13 @@ Follow the instructions in https://github.com/mastercoin-MSC/install-msc/blob/va
 
 TBD.
 
-== Proposed Mastercoin RPC API
+== Mastercoin RPC API
 
-The Mastercore implementation of Mastercoin will include a http://www.jsonrpc.org[JSON-RPC] API that allows access to key Mastercoin features over the HTTP(S) protocol. As Mastercore is based upon Bitcoin Core, the Mastercoin JSON-RPC API will be a superset of the API provided by Bitcoin.
+The Mastercore implementation of Mastercoin includes an http://www.jsonrpc.org[JSON-RPC] API that allows access to key Mastercoin features over the HTTP(S) protocol. As Mastercore is based upon Bitcoin Core, the Mastercoin JSON-RPC API will be a superset of the API provided by Bitcoin.
 
 The Bitcoin RPC API is documented in the https://en.bitcoin.it/wiki/Original_Bitcoin_client/API_Calls_list[Bitcoin API Calls List]. This section documents the additional commands planned for addition by Mastercoin.
 
-WARNING::
-This is preliminary information. The API is currently subject to change. We are currently in active development and are soliciting internal and external feedback on the functionality and naming conventions for the API.
-
-[options="header",frame="all"]
-|===
-| Command | Parameters | Description | Requires Unlocked Wallet | Notes
-
-| +getMPbalance+
-| +address+ +currencyID+
-| Retrieve balance of MP currency/address pair
-| N
-| Implemented
-
-| +listMPtransactions+
-| +address+ +currencyID+
-| List history of MP currency/address pair
-| N
-| To Do
-
-| +sendMPsimple+
-| +fromaddress+ +toaddress+ +currencyID+ +amount+
-| Simple send
-| Y
-| To Do
-
-| +getMPtransaction+
-| +txid+
-| Return JSON array of MP transaction
-| N
-| To Do
-
-| +getMPconsensus+
-|
-| +{"error:null,result:"IAMTHELAW"}+
-| N
-| ;)
-
-|===
-
-
-=== Types
-
-address::
-A https://en.bitcoin.it/wiki/Address[Bitcoin address].
-
-currencyID::
-A Master Protocol https://github.com/mastercoin-MSC/spec#field-currency-identifier[currency identifier].
-
-amount::
-The number of coins or tokens in a Master Protocol transaction.  See https://github.com/mastercoin-MSC/spec#field-number-of-coins[Number of coins] in the spec.
-
-=== Methods
-
-This section provides more detailed explanation of each RPC method. More details will be added over time.
-
-==== getMPbalance
-
-Returns the balance of +currencyID+ in +address+
-
-==== listMPtransactions
-
-Returns a list of all Master Protocol transactions for a given +address+ and +currencyID+
-
-(Unspecified +currencyID+ gives all transactions for all currency IDs?)
-
-==== sendMPsimple
-
-Send a Master Protocol currency from +fromaddress+ to +toaddress+.
-
-Issues:
-
-* Divisibility?
-
-==== getMPtransaction
-
-Return JSON array of an MP transaction specified by +txid+.
-
-==== getMPconsensus
-
-Yes, we really expect Mastercore to become the reference implementation of Master Procool. :)
+The https://github.com/mastercoin-MSC/mastercore/blob/mscore-0.0.8/doc/apidocumentation.md[Master Core RPC API Documentation] is available on Github.
 
 == Contributing to Mastercoin
 
