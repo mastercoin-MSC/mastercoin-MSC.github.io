@@ -5,7 +5,8 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.0.preview.7">
-<title>Mastercoin on GitHub</title>
+<meta name="author" content="Mastercoin Team">
+<title>Mastercore Reference</title>
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
@@ -386,70 +387,206 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </head>
 <body class="article">
 <div id="header">
-<h1>Mastercoin on GitHub</h1>
+<h1>Mastercore Reference</h1>
+<span id="author" class="author">Mastercoin Team</span><br>
+<span id="revnumber">version 0.1,</span>
+<span id="revdate">June 18, 2014</span>
+<br><span id="revremark">Early draft</span>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_overview">1. Overview</a></li>
+<li><a href="#_proposed_mastercoin_rpc_api">2. Proposed Mastercoin RPC API</a></li>
+<li>
+<ul class="sectlevel2">
+<li><a href="#_types">2.1. Types</a></li>
+<li><a href="#_methods">2.2. Methods</a></li>
+<li>
+<ul class="sectlevel3">
+<li><a href="#_getmpbalance">2.2.1. getMPbalance</a></li>
+<li><a href="#_listmptransactions">2.2.2. listMPtransactions</a></li>
+<li><a href="#_sendmpsimple">2.2.3. sendMPsimple</a></li>
+<li><a href="#_getmptransaction">2.2.4. getMPtransaction</a></li>
+<li><a href="#_getmpconsensus">2.2.5. getMPconsensus</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_further_info">3. Further info</a></li>
+</ul>
+</div>
 </div>
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This page is the Mastercoin Organization Page on Github and is meant to be a starting point for developers who wish to do one or more of the following:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Learn about Mastercoin</p>
-</li>
-<li>
-<p>Build Mastercoin</p>
-</li>
-<li>
-<p>Install Mastercoin</p>
-</li>
-<li>
-<p>Contribute to Mastercoin</p>
-</li>
-</ol>
+<p>Just the API spec for now.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_about_mastercoin">About Mastercoin</h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
-<h2 id="_learning_the_mastercoin_protocol_and_implementation">Learning the Mastercoin protocol and implementation</h2>
+<h2 id="_overview">1. Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>See the in-progress <a href="dev-guide.html">Mastercoin Developer&#8217;s Guide</a></p>
+<p>TBD.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_project_documents">Project Documents</h2>
+<h2 id="_proposed_mastercoin_rpc_api">2. Proposed Mastercoin RPC API</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>The Mastercore implementation of Mastercoin will include a <a href="http://www.jsonrpc.org">JSON-RPC</a> API that allows access to key Mastercoin features over the HTTP(S) protocol. As Mastercore is based upon Bitcoin Core, the Mastercoin JSON-RPC API will be a superset of the API provided by Bitcoin.</p>
+</div>
+<div class="paragraph">
+<p>The Bitcoin RPC API is documented in the <a href="https://en.bitcoin.it/wiki/Original_Bitcoin_client/API_Calls_list">Bitcoin API Calls List</a>. This section documents the additional commands planned for addition by Mastercoin.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">WARNING</dt>
+<dd>
+<p>This is preliminary information. The API is currently subject to change. We are currently in active development and are soliciting internal and external feedback on the functionality and naming conventions for the API.</p>
+</dd>
+</dl>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 100%;">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Parameters</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Requires Unlocked Wallet</th>
+<th class="tableblock halign-left valign-top">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>getMPbalance</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>address</code> <code>currencyID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Retrieve balance of MP currency/address pair</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Implemented</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>listMPtransactions</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>address</code> <code>currencyID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List history of MP currency/address pair</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To Do</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sendMPsimple</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fromaddress</code> <code>toaddress</code> <code>currencyID</code> <code>amount</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Simple send</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To Do</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>getMPtransaction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>txid</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return JSON array of MP transaction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To Do</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>getMPconsensus</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>{"error:null,result:"IAMTHELAW"}</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">;)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="_types">2.1. Types</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">address</dt>
+<dd>
+<p>A <a href="https://en.bitcoin.it/wiki/Address">Bitcoin address</a>.</p>
+</dd>
+<dt class="hdlist1">currencyID</dt>
+<dd>
+<p>A Master Protocol <a href="https://github.com/mastercoin-MSC/spec#field-currency-identifier">currency identifier</a>.</p>
+</dd>
+<dt class="hdlist1">amount</dt>
+<dd>
+<p>The number of coins or tokens in a Master Protocol transaction.  See <a href="https://github.com/mastercoin-MSC/spec#field-number-of-coins">Number of coins</a> in the spec.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_methods">2.2. Methods</h3>
+<div class="paragraph">
+<p>This section provides more detailed explanation of each RPC method. More details will be added over time.</p>
+</div>
+<div class="sect3">
+<h4 id="_getmpbalance">2.2.1. getMPbalance</h4>
+<div class="paragraph">
+<p>Returns the balance of <code>currencyID</code> in <code>address</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_listmptransactions">2.2.2. listMPtransactions</h4>
+<div class="paragraph">
+<p>Returns a list of all Master Protocol transactions for a given <code>address</code> and <code>currencyID</code></p>
+</div>
+<div class="paragraph">
+<p>(Unspecified <code>currencyID</code> gives all transactions for all currency IDs?)</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_sendmpsimple">2.2.3. sendMPsimple</h4>
+<div class="paragraph">
+<p>Send a Master Protocol currency from <code>fromaddress</code> to <code>toaddress</code>.</p>
+</div>
+<div class="paragraph">
+<p>Issues:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="mastercore-testplan.html">Mastercore Test Plan</a> (draft)</p>
+<p>Divisibility?</p>
 </li>
 </ul>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_getmptransaction">2.2.4. getMPtransaction</h4>
+<div class="paragraph">
+<p>Return JSON array of an MP transaction specified by <code>txid</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_getmpconsensus">2.2.5. getMPconsensus</h4>
+<div class="paragraph">
+<p>Yes, we really expect Mastercore to become the reference implementation of Master Procool. :)</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="sect1">
-<h2 id="_about_this_site">About this site</h2>
+<h2 id="_further_info">3. Further info</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>See the <a href="https://github.com/mastercoin-MSC/mastercoin-MSC.github.io">Github repo README</a>.</p>
+<p>TBD</p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-06-17 03:48:26 PDT
+Version 0.1<br>
+Last updated 2014-06-18 19:08:54 PDT
 </div>
 </div>
 </body>
